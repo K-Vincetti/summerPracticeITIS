@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Регистрация</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+        <script src="js/master.js"></script>
+    </head>
+    <body>
+        <pre class="hint">
+            - Для удаления друга, удержите кнопку в течение секунды
+            - Для редактирования данных друга используйте дабл-клик по кнопке
+        </pre>
+        <img class="new" src="images\plus.svg" alt="+" class="plus-icon" onclick="newApplication()" hidden>
+        <div class="modal">
+            <div class="header">
+                <span class="header-text">Заявка на регистрацию для мероприятия</span>
+                <div class="close-frame" onclick="closeButton()">
+                    <img src="images\close.svg" alt="X" class="close-icon">
+                </div>
+            </div>
+            <div class="list">
+                <div class="field-form">
+                    <label for="event-type">Тип мероприятия <span class="star">*</span></label>
+                    <input type="text" id="event-type" placeholder="Выберите вид мероприятия" required>
+                </div>
+
+                <div class="field-form">
+                    <label for="full-name">ФИО <span class="star">*</span></label>
+                    <input type="text" id="full-name" placeholder="Введите ФИО" required>
+                </div>
+
+                <div class="field-form">
+                    <label for="email">Имейл <span class="star">*</span></label>
+                    <input type="email" id="email" placeholder="Введите имейл" required>
+                </div>
+
+                <div class="field-form">
+                    <label for="phone-number">Номер телефона <span class="star">*</span></label>
+                    <input type="tel" id="phone-number" placeholder="+7 777 77 77" required>
+                </div>
+
+                <div id="friends">
+                    <button type="button" class="add-friend" onclick="addFriend()">
+                        <div class="plus-frame">
+                            <img src="images\plus.svg" alt="+" class="plus-icon">
+                        </div>
+                        <span class="text">Добавить друга</span>
+                    </button>
+                </div>
+
+                <div class="field-form">
+                    <label for="contact-type">Предпочитаемый вид связи <span class="star">*</span></label>
+                    <select id="contact-type" required>
+                        <option default hidden>Выберите предпочитаемый вид связи</option>
+                        <option>Телефон</option>
+                        <option>Почта</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="left-group">
+                    <button type="button" name="back" class="back-button">Назад</button>
+                    <button type="button" name="next" class="next-button">Дальше</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

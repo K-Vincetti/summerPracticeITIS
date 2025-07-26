@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 5000px;
+    background-color: orange;
+}
+
+.hint {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    background-color: #333;
+    color: white;
+    padding-top: 10px;
+}
+
+.modal{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px 0px #00000029;
+    font-family: "Inter", sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.header{
+    width: 640px;
+    height: 64px;
+    display: flex;
+    min-height: 64px;
+    padding-top: 16px;
+    padding-right: 12px;
+    padding-left: 32px;
+    gap: 8px;
+    border-bottom-width: 1px;
+    color: #21222C;
+    box-sizing: border-box;
+}
+
+.header-text{
+    width: 556px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.close-frame{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.close-icon, .removeFriendIcon{
+    width: 16px;
+    height: 16px;
+}
+
+.list{
+    width: 640px;
+    height: 464px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.list .field-form{
+    width: 576px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+}
+
+.list .field-form label {
+    width: 576px;
+    height: 20px;
+    color: #21222C;
+}
+
+.list .field-form input, .list .field-form select {
+    width: 100%;
+    box-sizing: border-box;
+    height: 32px;
+    padding-top: 6px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #C4C7D4;
+    color: #21222C;
+    background-color: white;
+    border-style: solid;
+}
+
+.list .field-form input::placeholder, .list .field-form select:required{
+    color: #8A8FA8;
+}
+
+.list .field-form label .star{
+    color: #8A8FA8;
+}
+
+.list .add-friend{
+    display: flex;
+    align-items: center;
+    width: 155px;
+    height: 32px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.list .add-friend .plus-frame {
+    width: 22px;;
+    height: 16px;
+    padding-right: 4px;
+    padding-left: 2px;
+}
+
+.list .add-friend .plus-icon{
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: 2px;
+}
+
+.list .add-friend .text {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    text-align: center;
+    width: 113px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.footer{
+    width: 640px;
+    height: 72px;
+    padding-top: 8px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    gap: 24px;
+    box-sizing: border-box;
+    background-color: none;
+}
+
+.footer .left-group{
+    display: flex;
+    width: 576px;
+    height: 32px;
+    gap: 16px;
+}
+
+.footer .left-group .back-button, .footer .left-group .next-button, .friend-block, .footer .left-group .save-button{
+    height: 32px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer .left-group .back-button{
+    width: 67px;
+    background-color: #E2E3E9;
+}
+
+.footer .left-group .next-button, .footer .left-group .save-button{
+    width: 79px;
+    background-color: #363949;
+    color: white;
+}
+
+.footer .left-group .save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#friends {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .new:hover {
+  filter: brightness(0.95);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.edit-modal{
+    height: 464px;
+}
+
+.edit-modal .list{
+    height: 325px;
+}
+
+.new {
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    background-color: white;
+    padding: 5px;
+    margin: 30px;
+    scale: 2;
+    cursor: pointer;
+    border-radius: 9px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.new:active {
+  transform: scale(0.95);
+}
+
+.modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.new {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.new.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
